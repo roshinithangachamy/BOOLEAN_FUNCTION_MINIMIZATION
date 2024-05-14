@@ -1,4 +1,7 @@
-# BOOLEAN_FUNCTION_MINIMIZATION
+## EX-11 <p align="center"><b> BOOLEAN_FUNCTION_MINIMIZATION </b>    
+
+**DATE:**
+
 
 **AIM:**
 
@@ -33,12 +36,12 @@ Hardware – PCs, Cyclone II , USB flasher
 
 **Program:**
 
-/* Program to implement the given logic function and to verify its operations in quartus using Verilog programming. 
+**Developed by: T.ROSHINI**
 
-Developed by: T.Roshini
-RegisterNumber: 212223230175
+**RegisterNumber:212223230175**
 
-module BMf1f2(a,b,c,d,w,x,y,z,f1,f2);
+```
+module Boolean_min(a,b,c,d,w,x,y,z,f1,f2);
 input a,b,c,d,w,x,y,z;
 output f1,f2;
 wire adash,bdash,cdash,ddash,ydash,p,q,r,s,t,u;
@@ -46,27 +49,28 @@ not(adash,a);
 not(bdash,b);
 not(cdash,c);
 not(ddash,d);
+not(ydash,y);
 and(p,bdash,ddash);
 and(q,adash,b,d);
 and(r,a,b,cdash);
 or(f1,p,q,r);
-//type code for f2 as like f1
-not(ydash,y);
-and(s,x,y);
-and(t,ydash,z);
-and(u,w,y);
-or(f2,s,t,u);
+and g1(s,ydash,z);
+and g2(t,x,y);
+and g3(u,w,z);
+or g4(f2,s,t,u);
 endmodule
-*/
+```
+
 
 
 **RTL realization Output**
 
-![digital exp 2](https://github.com/roshinithangachamy/BOOLEAN_FUNCTION_MINIMIZATION/assets/147118341/61578c1e-7ecc-4991-b0fc-fb0c653db28c)
+![boolean](https://github.com/roshinithangachamy/BOOLEAN_FUNCTION_MINIMIZATION/assets/147118341/710961ce-ce92-46c1-8908-e73ad187c04a)
+
 
 **Timing Diagram**
 
-![Screenshot 2024-04-08 152429](https://github.com/roshinithangachamy/BOOLEAN_FUNCTION_MINIMIZATION/assets/147118341/4d20284a-a0dc-40fd-9ba1-d784c496085b)
+![2 waveform](https://github.com/roshinithangachamy/BOOLEAN_FUNCTION_MINIMIZATION/assets/147118341/922a561e-a187-4680-a2b7-ac09368c50e4)
 
 **Result:**
 
